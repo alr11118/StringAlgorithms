@@ -72,16 +72,16 @@ public class StringAlgorithms {
      * first character that appears exactly once. If no such
      * character exists, return a space ' '.
      */
-    public static String firstUniqueChar(String word) {
+    public static char firstUniqueChar(String word) {
         // TODO: Implement this method
         for(int i =0; i<word.length(); i++){
          for(int j =i+1; i<word.length(); i++){
-            if( word.substring(i, i+1).equals( word.substring(j, j+1))){
-               return word.substring(i, i+1);
+            if( word.charAt(i);.equals(word.charAt(j);)){
+               return "a";
             }
          }
         }
-        return " ";
+        return "b";
     }
 
 
