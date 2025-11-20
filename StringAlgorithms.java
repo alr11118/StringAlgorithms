@@ -7,7 +7,11 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        return "";
+        String chars = "";
+        for(int i = 0; i<word.length(); i++){
+         chars += (word.substring(i, i+1) + "\n");
+        }
+        return chars;
     }
 
 
@@ -18,7 +22,11 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
-        return "";
+        String reversed = "";
+       for(int i = word.length()-1; i>= 0; i--){
+         reversed += (word.substring(i, i+1) + "\n");
+        }
+        return reversed;
     }
 
 
@@ -29,7 +37,13 @@ public class StringAlgorithms {
      */
     public static String capitalizeString(String sentence) {
         // TODO: Implement this method
-        return "";
+        sentence = (sentence.substring(0, 1).toUpperCase()) + sentence.substring(1, sentence.length());
+       for(int i = 0; i<sentence.length()-1; i++){
+         if(sentence.substring(i, i+1).equals(" ")){
+            sentence = sentence.substring(0, i+1) + sentence.substring(i+1, i+2).toUpperCase() + sentence.substring(i+2, sentence.length());
+         }
+       }
+       return sentence;
     }
 
 
@@ -40,7 +54,15 @@ public class StringAlgorithms {
      */
     public static boolean detectPalindrome(String word) {
         // TODO: Implement this method
-        return false;
+        String reversed = "";
+        for(int i = word.length()-1; i>= 0; i--){
+         reversed += (word.substring(i, i+1));
+        }
+        if(reversed.equals(word)){
+         return true;
+        }else{
+         return false;
+        }
     }
 
 
@@ -50,9 +72,16 @@ public class StringAlgorithms {
      * first character that appears exactly once. If no such
      * character exists, return a space ' '.
      */
-    public static char firstUniqueChar(String word) {
+    public static String firstUniqueChar(String word) {
         // TODO: Implement this method
-        return ' ';
+        for(int i =0; i<word.length(); i++){
+         for(int j =i+1; i<word.length(); i++){
+            if( word.substring(i, i+1).equals( word.substring(j, j+1))){
+               return word.substring(i, i+1);
+            }
+         }
+        }
+        return " ";
     }
 
 
@@ -66,22 +95,22 @@ public class StringAlgorithms {
         
         System.out.println("Testing printCharacters:");
         // Example:
-        // System.out.println(printCharacters("hello"));
+        System.out.println(printCharacters("hello"));
 
         System.out.println("\nTesting reverseWord:");
         // Example:
-        // System.out.println(reverseWord("hello"));
+        System.out.println(reverseWord("hello"));
 
         System.out.println("\nTesting capitalizeString:");
         // Example:
-        // System.out.println(capitalizeString("the quick brown fox"));
+        System.out.println(capitalizeString("the quick brown fox"));
 
         System.out.println("\nTesting detectPalindrome:");
         // Example:
-        // System.out.println(detectPalindrome("racecar"));
-
+        System.out.println(detectPalindrome("racecar"));
+       
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
-        // System.out.println(firstUniqueChar("swiss"));
+        System.out.println(firstUniqueChar("swiss"));
     }
 }
