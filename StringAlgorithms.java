@@ -75,11 +75,14 @@ public class StringAlgorithms {
     public static char firstUniqueChar(String word) {
         // TODO: Implement this method
         for(int i =0; i<word.length(); i++){
-        
+         boolean isRepeated = false;
          for(int j =i+1; j<word.length(); j++){
             if(word.charAt(i)==word.charAt(j)){
-               return word.charAt(i);
+               isRepeated = true;
             }
+         }
+         if(!isRepeated){
+            return word.charAt(i);
          }
         }
         return ' ';
@@ -112,6 +115,6 @@ public class StringAlgorithms {
        
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
-        System.out.println(firstUniqueChar("swiss"));
+        System.out.println(firstUniqueChar("swwiss"));
     }
 }
