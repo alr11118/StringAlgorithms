@@ -80,7 +80,10 @@ public class StringAlgorithms {
          System.out.println("..................................");
          System.out.println(word.charAt(i));
          System.out.println("");
-         for(int j =0; j<word.length() && !(j==i); j++){
+         for(int j =0; j<word.length(); j++){
+            if(j == i){
+               continue;
+            }
             System.out.println(word.charAt(j));
             if(word.charAt(i)==word.charAt(j)){
                isRepeated = true;
