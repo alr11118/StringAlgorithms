@@ -77,13 +77,19 @@ public class StringAlgorithms {
         // TODO: Implement this method
         for(int i =0; i<word.length(); i++){
          boolean isRepeated = false;
-         for(int j =i+1; j<word.length(); j++){
+         System.out.println("..................................");
+         System.out.println(word.charAt(i));
+         System.out.println("");
+         for(int j =0; j<word.length() && !(j==i); j++){
+            System.out.println(word.charAt(j));
             if(word.charAt(i)==word.charAt(j)){
                isRepeated = true;
+               System.out.println(isRepeated);
             }
          }
+         System.out.println(isRepeated);
          if(!isRepeated){
-            return word.charAt(i);
+            //return word.charAt(i);
          }
         }
         return ' ';
