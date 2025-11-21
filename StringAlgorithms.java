@@ -24,7 +24,7 @@ public class StringAlgorithms {
         // TODO: Implement this method
         String reversed = "";
        for(int i = word.length()-1; i>= 0; i--){
-         reversed += (word.substring(i, i+1) + "\n");
+         reversed += (word.substring(i, i+1));
         }
         return reversed;
     }
@@ -75,14 +75,15 @@ public class StringAlgorithms {
     public static char firstUniqueChar(String word) {
         // TODO: Implement this method
         for(int i =0; i<word.length(); i++){
-         for(int j =i+1; i<word.length(); i++){
-            if( word.charAt(i);.equals(word.charAt(j);)){
-               return "a";
+        
+         for(int j =i+1; j<word.length(); j++){
+            if(word.charAt(i)==word.charAt(j)){
+               return word.charAt(i);
             }
          }
         }
-        return "b";
-    }
+        return ' ';
+   }
 
 
     /**
