@@ -6,7 +6,7 @@ public class StringAlgorithms {
      * a String where each character is placed on its own line.
      */
     public static String printCharacters(String word) {
-        // TODO: Implement this method
+        // to: Implement this method
         String chars = "";
         for(int i = 0; i<word.length(); i++){
          chars += (word.substring(i, i+1) + "\n");
@@ -21,7 +21,7 @@ public class StringAlgorithms {
      * a new String with the characters reversed.
      */
     public static String reverseWord(String word) {
-        // TODO: Implement this method
+        // todo: Implement this method
         String reversed = "";
        for(int i = word.length()-1; i>= 0; i--){
          reversed += (word.substring(i, i+1));
@@ -36,7 +36,7 @@ public class StringAlgorithms {
      * the sentence with the first letter of each word capitalized.
      */
     public static String capitalizeString(String sentence) {
-        // TODO: Implement this method
+        // todo: Implement this method
         sentence = (sentence.substring(0, 1).toUpperCase()) + sentence.substring(1, sentence.length());
        for(int i = 0; i<sentence.length()-1; i++){
          if(sentence.substring(i, i+1).equals(" ")){
@@ -53,7 +53,7 @@ public class StringAlgorithms {
      * if the word is a palindrome (ignoring case), false otherwise.
      */
     public static boolean detectPalindrome(String word) {
-        // TODO: Implement this method
+        // todo: Implement this method
         String reversed = "";
         word = word.toLowerCase();
         for(int i = word.length()-1; i>= 0; i--){
@@ -74,25 +74,25 @@ public class StringAlgorithms {
      * character exists, return a space ' '.
      */
     public static char firstUniqueChar(String word) {
-        // TODO: Implement this method
+        // todo: Implement this method
         for(int i =0; i<word.length(); i++){
          boolean isRepeated = false;
-         System.out.println("..................................");
-         System.out.println(word.charAt(i));
-         System.out.println("");
+         //System.out.println("..................................");
+         //System.out.println(word.charAt(i));
+         //System.out.println("");
          for(int j =0; j<word.length(); j++){
             if(j == i){
                continue;
             }
-            System.out.println(word.charAt(j));
+            //System.out.println(word.charAt(j));
             if(word.charAt(i)==word.charAt(j)){
                isRepeated = true;
-               System.out.println(isRepeated);
+               //System.out.println(isRepeated);
             }
          }
-         System.out.println(isRepeated);
+         //System.out.println(isRepeated);
          if(!isRepeated){
-            //return word.charAt(i);
+            return word.charAt(i);
          }
         }
         return ' ';
@@ -105,7 +105,7 @@ public class StringAlgorithms {
      */
     public static void main(String[] args) {
 
-        // TODO: Add test calls for each challenge method
+        // todo: Add test calls for each challenge method
         
         System.out.println("Testing printCharacters:");
         // Example:
@@ -125,6 +125,6 @@ public class StringAlgorithms {
        
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
-        System.out.println(firstUniqueChar("swwiss"));
+        System.out.println(firstUniqueChar("swwiaiss"));
     }
 }
