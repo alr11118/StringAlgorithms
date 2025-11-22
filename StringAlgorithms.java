@@ -77,7 +77,7 @@ public class StringAlgorithms {
         // TODO: Implement this method
         for(int i =0; i<word.length(); i++){
          boolean isRepeated = false;
-         System.out.println("..................................");
+         System.out.println(".................................");
          System.out.println(word.charAt(i));
          System.out.println("");
          for(int j =0; j<word.length(); j++){
